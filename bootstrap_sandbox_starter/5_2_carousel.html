@@ -209,8 +209,16 @@
     $('.carousel').carousel({
       interval: 2000,
       keyboard: true,
-      pause: hover
+      pause: 'hover'
       // wrap: false = no loop for the slider when it's the last slide it stops looping
+    });
+
+    $('#slider4').on('slide.bs.carousel', function () {
+      console.log('SLIDE!');
+    });
+
+    $('#slider4').on('slid.bs.carousel', function () {
+      console.log('SLID!');
     });
   </script>
 </body>
